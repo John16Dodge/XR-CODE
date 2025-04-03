@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Screen</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2d3e50;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        .nav-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .nav-links img {
+            width: 30px;
+            border-radius: 50%;
+        }
+        .profile-container {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-pic img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .edit-profile {
+            display: block;
+            margin-bottom: 15px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .city-state {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .city-state div {
+            width: 48%;
+        }
+        .logout {
+            margin-top: 20px;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .img{
+            height: 80px;
+            width: 100px;
+        }
+        @media (max-width: 600px) {
+            .profile-container {
+                width: 90%;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <input type="text" placeholder="Search..">
+        <div class="nav-links">
+            <a href="#">Tech Jobs</a>
+            <a href="#">Categories</a>
+            <!--<img src="blog 1 image.png" alt="Profile" class="img">-->
+        </div>
+    </nav>
+    
+    <div class="profile-container">
+        <div class="profile-pic">
+            <img src="XR.png" alt="Profile Picture" class="img">
+        </div>
+       <a href="/editprofile" > <button value="Edit" class="edit-profile">&#9881;Edit Profile</button></a>
+        
+       <form action="/submit" method="post" >
+            <label name="FullName">Name</label>
+            <input type="text" name="FullName">
+            
+            <label name="Email">Email</label>
+            <input type="email" name="Email">
+            
+            <label name="Password">Password</label>
+            <input type="password" name="Password" required placeholder="Enter Special Characters">
+
+            <label name="Address">Address</label>
+            <input type="text" name="Address" >
+            
+            <label name="Contact">Contact Number</label>
+            <input type="text" name="Contact">
+            
+            <div class="city-state">
+                <div>
+                    <label name="City">City</label>
+                    <input name="City" type="text" >
+                </div>
+                <div>
+                    <label name="State">State</label>
+                    <input type="text"  name="State" >
+                </div>
+            </div>
+            <input type="submit" value="Save">
+            <button class="logout">Logout</button>
+        </form>
+    </div>
+</body>
+</html>

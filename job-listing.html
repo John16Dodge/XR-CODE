@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(88, 87, 213); color: rgb(17, 24, 39); border-radius: 8px; border-color: rgb(88, 87, 213); ;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .skill-tag {
+            background: #a0aec0;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-tag span {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back {
+            background: #ccc;
+        }
+        .publish {
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+    <h2>Job Details</h2>
+    
+    <div class="input-group">
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" placeholder="Enter job title" required>
+    </div>
+
+    <div class="input-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" placeholder="Enter company name" required>
+    </div>
+
+    <div class="input-group">
+        <label for="workplaceType">Workplace Type</label>
+        <select id="workplaceType" required>
+            <option>On-Site</option>
+            <option>Remote</option>
+            <option>Hybrid</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label for="jobType">Job Type</label>
+        <select id="jobType" required>
+            <option>Full-Time</option>
+            <option>Part-Time</option>
+            <option>Contract</option>
+            <option>Freelance</option>
+            <option>Internship</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label for="jobDescription">Job Description</label>
+        <textarea id="jobDescription" placeholder="Enter description.." required></textarea></textarea>
+    </div>
+
+    <h3>Skills</h3>
+    <div class="input-group">
+        <input type="text" id="skillInput" placeholder="Add a skill">
+        <button onclick="addSkill()">Add</button>
+    </div>
+    <div class="skills" id="skillsList"></div>
+
+    <div class="buttons">
+        <button class="back" onclick = "Upload()">Back</button>
+        <button class="publish" style="background-color: #000B58;" value="put">Publish</button>
+    </div>
+</div>
+
+<script>
+    let data=[]
+    function addSkill() {
+        let skillInput = document.getElementById("skillInput");
+        let skillsList = document.getElementById("skillsList");
+
+        if (skillInput.value.trim() !== "") {
+            let skillTag = document.createElement("div");
+            skillTag.classList.add("skill-tag");
+            skillTag.innerHTML = `${skillInput.value} <span onclick="removeSkill(this)">✖</span>`;
+            skillsList.appendChild(skillTag);
+            skillInput.value = "";
+        }
+    }
+    function Upload(){
+        var jobTitle = document.getElementById("jobTitle").value;
+        var jobType = document.getElementById("jobType").value;
+        var jobDescription = document.getElementById("jobDescription").value;
+        var skills = document.getElementById("skillsList").children;    
+    }
+
+    function removeSkill(element) {
+        element.parentElement.remove();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details Page</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2b2b2b;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .search-box {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .service-details {
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .salon-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .bio-section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .profile-img img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .bio-info h1 {
+            margin-bottom: 10px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: #000B58;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-outline {
+            background-color: #fff;
+            color: #2b2b2b;
+            border: 1px solid #2b2b2b;
+        }
+        .top-bar{
+            display: flex;
+            justify-content: end    ;
+            align-items: end;
+            margin: 20px;
+        }
+
+        .service-info ul {
+            list-style: none;
+        }
+
+        .rating {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .location-section, .service-for {
+            margin: 20px;
+        }
+
+        .map-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .input-field {
+            padding: 8px;
+            width: 80%;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .save-btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header><!--
+        <div class="top-bar">
+            <input type="text" placeholder="Search.." class="search-box">
+            <h2>Tech Jobs</h2>
+            <h2>Categories</h2>
+            <div class="profile-icon">
+                <img src="/Black Modern Personal LinkedIn Banner (4).png" alt="Profile" class="profile-pic">
+            </div>
+        </div>
+        -->
+    </header>
+
+    <section class="service-details">
+        <div class="salon-image">
+            <img src="" alt="Salon Background" style="height: 40px; width: 40px;">
+        </div>
+
+        <div class="bio-section">
+            <div class="profile-img">
+                <img src="/XR.png" alt="Julius Dante">
+            </div>
+            <div class="bio-info">
+                <h1>Julius Dante</h1>
+                <p class="bio">Hello I am Julius Dante based in Mumbai. I am a full-time salon employee and also own the place. Feel free to connect.</p>
+                <p class="salon-name"><strong>🏠 Dante’s Salon</strong></p>
+                <p class="service-description">
+                    Hair Castle Salon is a premium salon offering a range of hair and beauty services tailored to deliver a luxurious grooming experience.
+                </p>
+                <div class="btn-group">
+                    <button class="btn" style="background-color: #000B58;">Appoint</button>
+                    <button class="btn btn-outline">Message</button>
+                </div>
+            </div>
+
+            <div class="service-info">
+                <h3>Services:</h3>
+                <ul>
+                    <li>Blow dry</li>
+                    <li>Haircut</li>
+                    <li>Hair Straightening</li>
+                </ul>
+                <div class="rating">
+                    <span>&#11088; <strong>4.5k</strong></span> Reviews
+                </div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2>Choose Location</h2>
+            <p><strong>*Selected location:</strong></p>
+            <p>Prakruti building, opposite Vasudev Lane, Merut East, Mumbai - 400042</p>
+            <div class="map-container">
+                <img src="/XR.png" alt="Map" class="map-img" style="height:100px; width: 100px;">
+            </div>
+            <div class="btn-group">
+                <button class="btn" onclick="useCurrentLocation()">Use Current Location</button>
+                <button class="btn btn-outline" onclick="chooseLocation()">Choose a Location</button>
+            </div>
+        </div>
+
+        <div class="service-for">
+            <h2>Who is this service for?</h2>
+            <label><input type="radio" name="serviceFor" value="me"> For me</label><br>
+            <label><input type="radio" name="serviceFor" value="someoneElse"> For someone else</label>
+            <div>
+                <input type="text" placeholder="Write their name here..." class="input-field" id="nameField">
+                <button class="btn save-btn" onclick="saveName()">Save</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function useCurrentLocation() {
+            alert("Using your current location!");
+        }
+
+        function chooseLocation() {
+            alert("Choose your location manually!");
+        }
+
+        function saveName() {
+            const name = document.getElementById('nameField').value;
+            if (name) {
+                alert(`Service saved for: ${name}`);
+            } else {
+                alert("Please enter a name.");
+            }
+        }
+    </script>
+</body>
+</html>

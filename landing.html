@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="/login.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 80vh;
+        background-color: black;
+      }
+      #page{
+        background-color: rgb(88, 87, 213); color: rgb(17, 24, 39); border-radius: 8px; border-color: rgb(88, 87, 213); ;
+        height: 150vh;           /* Full viewport height */
+        width: 98.96vw;
+      }
+      .head li{
+          list-style-type: none;
+      }
+      .header{
+        display: flex;
+        flex-direction: row;
+        background-color: #000B58;
+        border: 1px solid ;
+      }
+      .logo-img{
+        height:40px;
+        width: 50px;
+      }
+      .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        padding: 10px;
+      }
+      a{
+          text-decoration: none;
+          color: white ;
+      }
+      .buttons{
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0px solid white;
+        color: white;
+        width: 100px;
+      }
+      .buttons:hover, .button:hover{
+        background-color: grey;
+        transition-duration: 1s;
+        transition-delay: .1s;
+      }
+      .head{
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          gap: 60px;
+          height: 50px;
+          background-size: cover;
+          padding: 10px;
+          width: 97%;
+      }
+      
+      .but:hover{
+        background-color: #23486A;
+        box-shadow: 2px 2px 4px 4px green;
+        color: white;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+      }
+      .search{
+        border-radius: 3px;
+        border-color: white;
+        border-style: hidden;
+        padding: 5px;
+      }
+      
+      /* Mini About*/
+      #mini-about{
+        background-color: #000B58;
+        border-radius: 10px;
+        padding: 20px;
+        height: 320px;
+        margin-right: 10px;
+        margin: 70px;
+      }
+      .job1{
+        height: 300px;
+        width: 450px;
+        margin-top: 10px;
+      }
+      .but{
+        background-color: #000957;
+        border-radius: 4px;
+        color: white;
+        padding: 10px;
+        width:130px;
+        border: 0;
+        font-size: 17px;
+      }
+
+      .button{
+        background-color: transparent;
+        border-radius: 4px;
+        border: 2px solid white;
+        padding: 10px;
+        width:130px;
+        font-size: 17px;
+        color: white;
+      }
+      #companies{
+        margin-top:70px; 
+      }
+      .com-1{
+        background-color: transparent ;
+        border-radius: 10px;
+        height: 100px;
+        width: 122px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .logos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .xrlogo{
+        margin-top: 30px;
+        height: 100px;
+        width:100px;
+      }
+      .launcher{
+        color: #23486A;
+        border-radius: 4px;
+        background-color: white;
+        padding: 8px;
+        width:120px;
+        border: 0;
+        margin-bottom: 100px;
+      }
+      .launcher:hover{
+        box-shadow: 2px 2px 4px 4px white;
+        background-color: #000957;
+        color: white;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+      }
+      #why li{
+        list-style-type: circle;
+        background-color: #000957; 
+        margin-bottom: 15px; 
+        padding: 8px; 
+        border-radius: 10px; 
+        color: white;
+        width: 900px;
+      }
+      #why{
+          background-color: white;
+          border-radius: 10px;
+          padding: 10px;
+          height: 620px;
+          margin:20px;
+          margin-top: 150px;  
+      }
+      .flexer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #testimonials{
+        background-color: black;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        position: 0;
+        padding: 20px;
+      }
+      .logos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .logos-test{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .com-2{
+        background-color: white;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000957;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px black;
+      }
+      .xr-logo{
+        margin-top:0px ;
+        height: 80px;
+        width:100px;
+        background-color: white;
+      }
+      .internal{
+        text-align: center;
+        background-color: #000957;
+        margin: 0;
+        height: 120px;
+        width: 100%;
+        padding: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .loginimg{
+        height: 625px;
+        width: 48.95%;
+        float: left;
+      }
+      .login{
+        padding: 20px;
+        width: 48.4%;
+        height: 60%;
+        float: right;
+        background-color: #000B58;
+      }
+      .inputs{
+        padding: 10px;
+        border-radius: 6px;
+        border: 1.4px solid red;
+        width: 96%;
+      }
+      #login-data{
+        position: relative;
+        bottom: 200px;
+      }
+      .content{
+        background-color: #000B58;
+        width: 97.12%;
+        height: 70px;
+        padding:20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      .content{
+        position: relative;
+        border: 1px dotted white;
+        background-color: #000957;
+      }
+      .f-img{
+        height: 50px;
+        width: 50px;
+      }
+      </style>
+</head>
+<body>
+    <div id="page">
+        <div class="header">
+            <div class="logo">
+                <img src="XR-bg-removed.png" alt="" class="logo-img">
+            </div>
+            <div class="head">
+            <li><button class="buttons"><a style="color: white;" href="/about">About</a></button></li>
+            <li><button class="buttons"><a style="color: white;" href="/contact">Contact</a></button></li>
+          <!--  <li><button class="buttons"><a style="color: white;" href="/">Sign-In</a></button></li>
+            <li><button class="buttons"><a style="color: white;" href="/">Sign-Up</a></button></li>-->
+
+            
+            </div>
+        </div>
+    <div id="mini-about">
+        <img style="float: right;" src="/Job Srch.jpg" alt="" class="job1">
+        <h1 style="color: white;">Find the Perfect Jobs, Whether small or big</h1>
+        <p style="color: white; line-height:1.7 ;">
+            X-Recruit offers a wide range of job opportunities, from high-level executive roles to entry-level positions.
+            Connects companies and individuals with the right talent, whether it's daily wage workers or tech professionals.
+            Allows users to create personalized profiles to showcase their skills and experience.
+            Provides career development guidance to help individuals achieve their professional goals.
+            Offers opportunities for internships, part-time jobs, and freelancing, tailored to individual interests.
+            Provides 24/7 customer service for continuous support and assistance.
+        </p>
+        <!--<button class="but">Login Page &rarr;</button>-->
+        <br>
+        <button style="text-align: center; color: white;" class="button"><a href="https://drive.google.com/file/d/1lOTAJuORwBCOyd0TpWRMCJcbEUCZTQo6/view?usp=sharing" style="color: white;" >Idea Pitch <i class="fa fa-download"></i></a></button>
+        <br>
+    </div>
+
+    <div id="companies">
+        <center><h3 style="color: white; font-family: 'Courier New', Courier, monospace; line-height: 1.5;">Top Companies That Offer Jobs</h3></center>
+        <div class="logos">
+            <div class="com-1">
+                    <img src="/XR-bg-removed.png" alt="" class="xrlogo">
+                    
+            </div>
+            <div class="com-1">
+                <img src="/XR-bg-removed.png" alt="" class="xrlogo">
+                
+            </div>
+            <div class="com-1">
+                <img src="/XR-bg-removed.png" alt="" class="xrlogo">
+               
+            </div>
+            <div class="com-1">
+                <img src="/XR-bg-removed.png" alt="" class="xrlogo">
+               
+            </div>
+            <div class="com-1">
+                <img src="/XR-bg-removed.png" alt="" class="xrlogo">
+                
+            </div>
+            <div class="com-1">
+                <img src="/XR-bg-removed.png" alt="" class="xrlogo">
+                
+            </div>
+            <div class="com-1">
+                <img src="/XR-bg-removed.png" alt="" class="xrlogo">
+                  
+            </div>
+        </div>
+    </div>
+<!--
+    <div id="mini-about">
+        <img style="float: right;" src="/Images/Categories page/Categories 2 image.png" alt="" class="job1">
+        <h1 style="font-size1.5em ;color: #5B99C2;">Welcome to X-Recruit</h1>
+        <p>
+            At X-Recruit, we redefine the recruitment experience by connecting the right talent with the right opportunities. Whether you're a company looking for top-notch professionals or an individual seeking your next big career move, X-Recruit is here to guide you every step of the way.
+        </p>
+        
+        
+        <button class="but"><a href="https://drive.google.com/file/d/1lOTAJuORwBCOyd0TpWRMCJcbEUCZTQo6/view?usp=sharing" >Idea Pitch <i class="fa fa-download"></i></a></button>
+        
+
+    </div>
+
+    
+    <div id="why">
+      <center>
+        <h1 style="font-size1.5em ;color: #5B99C2;">Why X-Recruit?</h1>
+      </center>
+      <ul class="flexer">
+        <li><p style="color: yellow; text-decoration: underline;">Extensive Job Opportunities:</p>Access a diverse range of job listings, from executive roles to entry-level positions, tailored to your skills and experience.</li>
+        <li><p style="color: yellow; text-decoration: underline;">Tailored Talent Connections: </p>Our platform connects companies with the right talent and helps individuals find roles that perfectly fit their career goals.</li>
+        <li><p style="color: yellow; text-decoration: underline;">Career Development Support: </p>Get expert career guidance to help you advance in your professional journey and reach your goals.</li>
+        <li><p style="color: yellow; text-decoration: underline;">Flexible Work Options: </p>Explore internships, part-time jobs, and freelancing opportunities that match your interests and lifestyle.</li>
+        <li><p style="color: yellow; text-decoration: underline;">24/7 Customer Service: </p>Benefit from continuous support with our round-the-clock customer service team, always ready to assist you.</li>
+    </ul> 
+    </div>
+-->
+    <div id="personal">
+        
+    </div>
+</div>
+
+<div id="login-data">
+    <img src="/Login section image.png" alt="" class="loginimg">
+    <div class="login">
+        <h1 style="color: white; font-size:80px">Login</h1>
+        <p style="color: white;">Login into Your Account</p>
+        <br>
+        <br>
+        <div class="forms">
+            <form action="/submit" method="post">
+                <label for="email" name="mail" style="color: white;">User Detail</label>
+                <br>
+                <input onclick="changeBorderss()" class="inputs" type="email" id="email" name="name" required placeholder="Enter Your Email" style="color: white;">
+                <br>
+                <br>
+                <label for="Password" name="password" style="color: white;">Password</label>
+                <br>
+                <input  onclick="changeBorders()" class="inputs" type="password" id="Password" name="name" required placeholder="Enter Password" style="color: white;">
+            <br>
+            <br>
+            <input  type="checkbox" id="Password" name="name" required  >    Remember Me?
+            <br>
+            <br>
+            <!--<button style="text-align: center; width: 100%;" class="button"><a href="/main" target="_blank" style="color: black;">Login</a></button>-->
+            <input class="button" value="Login" type="submit" >
+            <br>
+            <p style="text-align: center; margin-top: 50px; color: white;">Don't Have an Account Yet? <a href="/login" style="text-decoration:underline; color: bisque">Click Here</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="content">
+        <img src="/Linkedin.png" alt="linkedin" class="f-img">
+        <img src="/insta-bg-removed-removebg-preview.png" alt="insta" class="f-img">
+        <img src="Github.png" alt="github" class="f-img">
+        <img src="Mail.png" alt="mail" class="f-img">
+    </div>
+</div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    <div id="testimonials">
+        <h1>Testimonials</h1>
+        
+        <div class="logos-test">
+     
+            <div class="com-2">
+                <img src="/XR.png" alt="" class="xr-logo">
+                <div class="internal">
+                    <p>X-Recruit</p>
+                    <h6 style="text-align: start;">This is a avery good experience</h6>
+                </div>
+            </div> 
+
+            <div class="com-2">
+                <img src="/XR.png" alt="" class="xr-logo">
+                <div class="internal">
+                    <p>X-Recruit</p>
+                    <h6 style="text-align: start;">This is a avery good experience</h6>
+                </div>
+            </div> 
+            <div class="com-2">
+                <img src="/XR.png" alt="" class="xr-logo">
+                <div class="internal">
+                    <p>X-Recruit</p>
+                    <h6 style="text-align: start;">This is a avery good experience</h6>
+                </div>
+            </div> 
+
+            <div class="com-2">
+                <img src="/XR.png" alt="" class="xr-logo">
+                <div class="internal">
+                    <p>X-Recruit</p>
+                    <h6 style="text-align: start;">This is a avery good experience</h6>
+                </div>
+            </div> 
+        </div>   
+    </div>
+
+-->
+
+ 
+
+
+
+</html>
+
+<script>
+  // script.js
+/*
+function changeBorderss() {
+
+    var elements = document.getElementById('email');
+    
+        elements[i].style.borderColor = 'green'; // Change border color to red    // Change border width to 10px
+    
+}
+
+function changeBorders  () {
+    var elements = document.getElementById('Password');
+    
+        elements[i].style.borderColor = 'green'; // Change border color to red    // Change border width to 10px
+} 
+*/
+</script>

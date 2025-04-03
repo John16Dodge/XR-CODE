@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <style>head, body{
+        margin: 0;
+        padding: 0;
+        height: 400vh;
+        background-color: bisque;
+    }
+    .profile-img{
+        height: 30px;
+        width:30px;
+        border-radius: 50%;
+    }
+    .header{
+        background-color: #5B99C2;
+    }
+    
+    .back{
+        background-color: green;
+        border: 0px;
+        padding: 10px;
+        width: 80px;
+        border-radius: 8px;
+    }
+    .back:hover{
+        background-color: red;
+        transition-duration:.4s ;
+    }
+    .bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        margin-right: 20px;
+        padding: 10px;
+        gap: 30px;
+    }
+    .home{
+        height: 400vh;
+        width: 100%;
+        background-color: bisque;
+        margin-top: 10px;
+        margin: 20px;
+    }
+    
+    .prof{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+    .image{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row;
+    }
+    .bg-img{
+        height: 300px;
+        width: 50%;
+    }
+    .profile-image{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        position: absolute;
+        bottom: 300px;
+        left: 50px;
+        height: 100px;
+        width: 400px;
+    }
+    .content{
+        background-color: #5B99C2;
+        width: 44.7%;
+        padding: 40px;
+        color:white ;
+        text-align: justify;
+    }.about{
+        margin-top: 50px;
+    }
+    li{
+        margin-top: 10px;
+    }
+    .job-categ{
+        width: 300px;  height: 200px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .box{
+        width: 300px;
+        height: 250px;
+        background-color: beige;
+        border-radius: 5px;
+    }
+    .categories{
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .box:hover{
+        transform: scale(1.10);
+        transition-duration:.4s ;
+    }
+    .jobs-box{
+        background-color: beige;
+        width: 300px;
+        height: 250px;
+        border-radius: 5px;
+        margin: 20px;
+    
+    }
+    
+    .jobs-recommended{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .Apply, .View{
+        padding: 10px;
+        width: 80px;
+        border-radius: 4px;
+    }
+    
+    .Apply{
+        background-color: #5B99C2;
+        color: white;
+        border: 0px;
+    }
+    .View{
+        background-color: bisque;
+        color: #5B99C2;
+        border: 1px solid #5B99C2;
+        
+    }
+    
+    .Apply:hover{
+        background-color: bisque;
+        color: #5B99C2;
+        transition-duration:.4s ;
+        border: 1px solid #5B99C2;
+    }
+    
+    .View:hover{
+        background-color: #5B99C2;
+        color: white;
+        transition-duration:.4s ;
+        border: 0px;
+    }
+    .status{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="bar">
+            <button class="back"><a href="" style="text-decoration: none; color: white;">Back</a></button>
+            <a href="/Profile.html"><img src="/Images/Blog page/blog 1 image.png" alt="Laptop Img" class="profile-img"></a>
+        </div>
+    </div>
+    <div class="home">
+        <div class="image">
+            <img src="/Images/Categories page/Categories 3 image.png" alt="" class="bg-img">
+        </div>
+        
+        <div class="profile-image">
+            <img src="/XR.png" alt="" class="prof">
+        </div>
+
+        <div class="content">
+            <div class="about">
+                <h2>Magesh Kumar Jayavel</h2>
+            <p>Chief Operating Officer @ X-Recruit</p>
+            <br>
+                <h2>About The Job</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aut, quibusdam facilis eligendi, reiciendis non sequi a, illo omnis laborum dolorem error laudantium. Nobis totam quidem quo quos beatae? Nemo.
+                </p>
+                <h3>Requirements</h3>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    
+        <div class="recommend">
+            <h2 style="margin-bottom: 30px; padding: 20px;">Most Recent Jobs</h2>
+        <div class="jobs-recommended">
+                <div class="jobs-box">
+                    <div class="status">
+                        <li>
+                            Full-Time
+                        </li>
+                        <img src="" alt="location"><p>Mumbai</p>
+                    </div>
+                    <h1 style="margin-bottom: 20px;">JOB ROLES</h1>
+                    <img src="" alt="Thala" style="float: left;"><h2 style="margin-bottom:20px;">Company Name</h2>
+                    <div class="buttons">
+                            <button class="Apply">Apply</button>
+                            <button class="View">View</button>
+                    </div>
+                </div>
+                <div class="jobs-box">
+                    <div class="status">
+                        <li>
+                            Full-Time
+                        </li>
+                        <img src="" alt="location"><p>Mumbai</p>
+                    </div>
+                    <h1 style="margin-bottom: 20px;">JOB ROLES</h1>
+                    <img src="" alt="Thala" style="float: left;"><h2 style="margin-bottom:20px;">Company Name</h2>
+                    <div class="buttons">
+                            <button class="Apply">Apply</button>
+                            <button class="View">View</button>
+                    </div>
+                </div>
+        
+                <div class="jobs-box">
+                    <div class="status">
+                        <li>
+                            Full-Time
+                        </li>
+                        <img src="" alt="location"><p>Mumbai</p>
+                    </div>
+                    <h1 style="margin-bottom: 20px;">JOB ROLES</h1>
+                    <img src="" alt="Thala" style="float: left;"><h2 style="margin-bottom:20px;">Company Name</h2>
+                    <div class="buttons">
+                            <button class="Apply">Apply</button>
+                            <button class="View">View</button>
+                    </div>
+                </div>
+        
+                <div class="jobs-box">
+                    <div class="status">
+                        <li>
+                            Full-Time
+                        </li>
+                        <img src="" alt="location"><p>Mumbai</p>
+                    </div>
+                    <h1 style="margin-bottom: 20px;">JOB ROLES</h1>
+                    <img src="" alt="Thala" style="float: left;"><h2 style="margin-bottom:20px;">Company Name</h2>
+                    <div class="buttons">
+                            <button class="Apply">Apply</button>
+                            <button class="View">View</button>
+                    </div>
+                </div>
+        
+        </div>
+        </div>
+    
+    </div>
+</body>
+</html>

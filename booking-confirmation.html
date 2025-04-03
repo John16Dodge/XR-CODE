@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dante's Saloon - Booking Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+    --primary-color: #2d3742;
+    --secondary-color: #f5f7f9;
+    --white: #ffffff;
+    --gray-100: #f3f4f6;
+    --gray-700: #374151;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Search Bar */
+.search-bar {
+    background-color: rgb(88, 87, 213); color: rgb(17, 24, 39); border-radius: 8px; border-color: rgb(88, 87, 213);
+    padding: 1rem;
+}
+
+.search-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-wrapper {
+    position: relative;
+    max-width: 400px;
+    flex: 1;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+.profile-pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #ec4899;
+}
+
+/* Header */
+.header {
+    background-color: rgba(156, 163, 175, 0.3);
+    padding: 1.5rem;
+}
+
+.header .container {
+    text-align: center;
+}
+
+.back-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgb(88, 87, 213); color: rgb(17, 24, 39); border-radius: 8px; border-color: rgb(88, 87, 213);;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Profile Section */
+.specialist-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.specialist-img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Address Section */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.edit-btn {
+    color: #2563eb;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Payment Summary */
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.summary-item.total {
+    border-top: 1px solid rgb(88, 87, 213); color: rgb(17, 24, 39); border-radius: 8px; border-color: rgb(88, 87, 213);;
+    padding-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Buttons */
+.payment-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #000B58;
+    color: var(--white);
+    border: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid v#000B58;
+}
+
+.btn-call {
+    background-color: #000B58;
+    color: var(--white);
+    border: none;
+    border-radius: 9999px;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+/* Help Section */
+.help-section p {
+    color: #000B58;
+    margin-bottom: 1rem;
+}
+    </style>
+</head>
+<body>
+    <!-- Search Bar -->
+    <nav class="search-bar">
+        <div class="container">
+            <div class="search-wrapper">
+                <input type="search" placeholder="Search..">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="nav-links">
+                <a href="/tech">Tech Jobs</a>
+                <a href="/main">Categories</a>
+                <div class="profile-pic"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <button class="back-btn"><a href="/about-seeker">←</a></button>
+            <h1>Dante's Saloon</h1>
+            <p id="today">Date: Aug, 12</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <!-- Booking Confirmation -->
+        <div class="booking-section">
+            <div class="card">
+                <h2>Confirm Booking</h2>
+                <div class="profile-section">
+                    <h3>Profile</h3>
+                    <div class="specialist-info">
+                        <img src="/blog 1 image.png" alt="Specialist" class="specialist-img">
+                        <p>A Hair Specialist Will be Sent to individuals selected address.</p>
+                    </div>
+                </div>
+                <div class="address-section">
+                    <div class="section-header">
+                        <h3>Address</h3>
+                        <button class="edit-btn">Edit</button>
+                    </div>
+                    <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+                </div>
+                <div class="user-info-section">
+                    <h3>Your Information</h3>
+                    <p class="user-name">Alex Scamedar</p>
+                    <p class="user-email">Alex@34uigmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <div class="card">
+                <h2>Payment Method</h2>
+                
+                <div class="payment-summary">
+                    <h3>Payment Summary</h3>
+                    <div class="summary-item">
+                        <span>Total</span>
+                        <span>Rs 550/-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Gst</span>
+                        <span>Rs 50/-</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Discount</span>
+                        <span>-Rs 30/-</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Amount Payable</span>
+                        <span>Rs 570/-</span>
+                    </div>
+                </div>
+
+                <div class="payment-buttons">
+                    <button class="btn btn-primary">COD</button>
+                    <button class="btn btn-outline">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="card help-section">
+                <h3>Need Help?</h3>
+                <p>Call directly to owner for any queries!</p>
+                <button class="btn-call">📞</button>
+            </div>
+        </div>
+    </main>
+
+
+ 
+</body>
+</html>
+
+<script>
+    let date= document.getElementbyId("today");
+</script>

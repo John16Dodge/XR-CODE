@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>body, html{
+        margin: 0;
+        padding: 0;
+      }
+      .profile-img{
+        height: 30px;
+        width:30px;
+        border-radius: 50%;
+      }
+      .header{
+        background-color:  rgb(88, 87, 213); color: rgb(17, 24, 39); border-radius: 8px; border-color: rgb(88, 87, 213); ;
+        border-bottom: 2px solid bisque;
+      }
+      
+      .back{
+        background-color: green;
+        border: 0px;
+        padding: 10px;
+        width: 80px;
+        border-radius: 8px;
+      }
+      .back:hover{
+        background-color: red;
+        transition-duration:.4s ;
+      }
+      .bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        margin-right: 20px;
+        padding: 10px;
+        gap: 30px;  
+      }
+      .login-region{
+        padding: 10px;
+        margin-top: 0px;
+        background-color: #000B58;
+        height: 72.5vh;
+      
+      }
+      .logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .logo-img{
+        height: 100px;
+        width: 120px;
+      }
+      .login-data{
+        height: 200px;
+        width: 500px;
+        background-color: white ;
+        padding: 20px;
+        text-align: start;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      label{
+        color: black;
+      }
+      input{
+        width: 95%;
+        padding: 5px;
+        margin-top: 5px;
+        border: 2px solid #000B58;
+        background-color: transparent;
+        border-radius: 5px;
+      }
+      .sign-button{
+        
+        width: 98%;
+        margin-top:30px ;
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid #000B58;
+        background-color: transparent;
+      }
+      
+      .sign-button:hover{
+        background-color: #5B99C2;
+        transition-delay: .1s;
+        transition-duration: 0.1s;
+        color: white;
+       
+      }
+      .content{
+        background-color:  rgb(88, 87, 213); color: rgb(17, 24, 39); border-radius: 8px; border-color: rgb(88, 87, 213); ;
+        ;
+        width: 97.4%;
+        height: 84px;
+        padding:23px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-right: 5px;
+      }
+      
+      .f-img{
+        height: 50px;
+        width: 50px;
+      }
+      
+      .footer{
+        margin-top: 0px;
+        border-top: 2px solid bisque;
+      }</style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="bar">
+            <button class="back"><a href="" style="text-decoration: none; color: white;">Home</a></button>
+            <button class="back"><a href="/landing.html" style="text-decoration: none; color: white;">Back</a></button>
+        </div>
+    </div>
+
+    <div class="login-region">
+        <div class="logo">
+            <img src="XR-bg-removed.png" alt="" class="logo-img">
+            <h2 style="color: #5B99C2;">Sign in to X-Recruit</h2>
+        </div>
+        <center>
+            <div class="login-data">
+                <form action="submit">
+                    <label for="email">Email Address</label>
+                    <br>
+                    <center><input type="email" required></center>
+                    <br>
+                    <label for="email">Password</label> <a style="margin-left: 60%; text-decoration: none; color: blue;" href="">Forgot Password?</a>
+                    <br>
+                    <center><input type="password" required></center>
+
+                    <center><button class="sign-button"><a href="/home.html"></a>Sign in</button></center>
+                </form>
+            </div>
+       </center>
+    </div>
+    
+    
+
+<div class="footer">
+    <div class="content">
+        <img src="/Github.png" alt="" class="f-img">
+        <img src="/Linkedin.png" alt="" class="f-img">
+        <img src="/insta-bg-removed-removebg-preview.png" alt="" class="f-img">
+        <img src="/Mail.png" alt="" class="f-img">
+    </div>
+</div>
+    
+</body>
+</html>
